@@ -1,0 +1,69 @@
+multiple conversations / pages
+multiple option picker
+sound/livechat
+
+https://jivox-support-login.dev2.jivox.com/oauth2/authorize?client_id=52ge30ca2tmlpratja48dqatfa&response_type=code&scope=email+openid&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Flogged_in.html
+
+Priority TODO:
+1. access to the chatbot page only after loggin in
+2. the api should be secured with the api_token
+api key should be hidden while sending request to backend
+
+Pending Tasks:
+1. integrate fluent bit for logs
+2. record activity in the portal
+
+Project expansion:
+1. outside jivox portal email validation with db to fetch conversations
+
+
+#https://www.youtube.com/watch?v=RpWeNzfSUHw&ab_channel=PythonEngineer
+
+Presentation:
+  Notes:
+    - Rule based Vs Self learning chatbots
+    - See other algorithms for chatbot
+    - Why bag of words is used in ml count vectorizers #bag_of_words #tfidf #word2vec
+  
+  Useful For:
+    see if we can do deployment
+    see active clients currently
+    reduce cost from 3rd party support tools
+    provide recomendationds based on user activity
+    Notifications and guser_idances for new updates and releases 
+    Documentation can be added and search the documentation from chatbot itself
+    
+  Resources Required:
+    1. rds
+    2. Cognito, Dynamodb
+
+
+###config-parser
+#print(config.get("cognito","userpoolid"))
+#print(config.sections())
+#print(config.items("test"))
+
+###flask app logger
+#app.logger.critical("The application is stooped") #app logger
+
+
+######## Extract all the links  from https://docs.jivox.com/jivox-documentation/how-to-navigate-accounts
+
+var x = document.querySelectorAll("a");
+var myarray = []
+for (var i=0; i<x.length; i++){
+var nametext = x[i].textContent;
+var cleantext = nametext.replace(/\s+/g, ' ').trim();
+var cleanlink = x[i].href;
+myarray.push([cleantext,cleanlink]);
+};
+function make_table() {
+    var table = '<table><thead><th>Name</th><th>Links</th></thead><tbody>';
+   for (var i=0; i<myarray.length; i++) {
+            table += '<tr><td>'+ myarray[i][0] + '</td><td>'+myarray[i][1]+'</td></tr>';
+    };
+  
+    var w = window.open("");
+w.document.write(table); 
+}
+make_table()

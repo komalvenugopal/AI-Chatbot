@@ -1,0 +1,11 @@
+INFO:__main__:Starting the application...
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2022 19:26:05] "OPTIONS /predict HTTP/1.1" 200 -
+INFO:chat:Recived Message: how is the cookie data stored
+INFO:__main__:Posted the response {'answer': 'Deploying Jivox pixels on brand site enables you to correlate user activity on the brand site with a Jivox dynamic campaign. The two types of pixels that are supported are: Retargeting pixels to capture information about user activity on site. For example, you might track the last product browsed or placed in a shopping cart. For more details see Retargeting Pixels Conversion pixels to capture information about conversion events on site. For example, you might track creatives viewed before each product purchase. For more details see Conversion Pixels https://docs.jivox.com/jivox-documentation/about-tracking-site-activity'}
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2022 19:26:05] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2022 19:26:39] "OPTIONS /predict HTTP/1.1" 200 -
+INFO:chat:Recived Message: problem creating ad
+INFO:__main__:Posted the response {'answer': 'With the first option, designers can easily reuse existing HTML5 creatives in personalized ad campaigns. Designers can also continue to use their preferred creative design tools for the ad build, while leveraging the robust Jivox IQ backend infrastructure for personalizing ad campaigns at scale. With the second option, designer can use the Jivox IQ Ad Studio to design a creative from scratch. Designers can use built-in productivity enhancements like the Jivox EasyBuild widgets, dynamic text assets, and hotspots to create stunning ads without any coding, using an intuitive drag-and-drop interface. Refer this article for more info: https://docs.jivox.com/jivox-documentation/how-to-create-ad-and-ad-units'}
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2022 19:26:39] "POST /predict HTTP/1.1" 200 -
+CRITICAL:__main__:Application is Stopped...

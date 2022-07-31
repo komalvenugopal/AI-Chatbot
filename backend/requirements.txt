@@ -1,0 +1,7 @@
+Flask
+flask_cors
+torchvision
+torch
+nltk 
+gensim
+#nltk.download('punkt')
