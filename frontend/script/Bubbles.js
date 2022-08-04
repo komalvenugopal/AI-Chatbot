@@ -90,11 +90,14 @@ function Bubbles(container, self, options) {
         !lastBubble.classList.contains("reply-freeform")
           ? lastBubble.classList.add("bubble-hidden")
           : false
+        // console.log(this.value);
         addBubble(
           '<span class="bubble-button bubble-pick">' + this.value + "</span>",
           function() {},
           "reply reply-freeform"
         )
+        console.log(this.value);
+        console.log(standingAnswer);
         // callback
         typeof callbackFn === "function"
           ? callbackFn({
