@@ -1,6 +1,8 @@
-var p=["o"];
+var p=["init"];
 function start_the_service() {
-  if (p[0] ==="o") {
+  // console.log(p);
+  if (p[0] ==="init") {
+    p[0]="started";
     var t  = document.createElement("div");
     var t2  = document.createElement("script");
     t.id = "chat";
@@ -13,14 +15,21 @@ function start_the_service() {
     }
     t2.src="script/chat.js";
     document.body.appendChild(t);
-    p[0] = "c";
     document.body.appendChild(t2);
     document.getElementById("mn-btn").style.borderRadius = "0px 0px 20px 20px";
-  } else {
-    document.getElementById('chat').remove();
-    p[0] ="o";
-    document.getElementById("mn-btn").style.borderRadius = "20px 20px 0px 0px";
+  } 
+  else if(p[0]=="started"){
+    p[0]="closed"
+    document.getElementById('chat').style.display="none";
+    // document.getElementById('chat').remove();
+    // p[0] ="o";
+    // document.getElementById("mn-btn").style.borderRadius = "20px 20px 0px 0px";
   }
+  else if(p[0]=="closed"){
+    p[0]="started"
+    document.getElementById('chat').style.display="block";
+  }
+
 }
 document.body.onload = function () {
 if (window.innerWidth < window.innerHeight) {
@@ -29,5 +38,5 @@ if (window.innerWidth < window.innerHeight) {
   t.style.left="2vh";
   t.style.top="75vh";
 }
-console.log("loaded");
+console.log("Chatbot Loaded");
 }

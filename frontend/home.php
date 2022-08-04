@@ -22,9 +22,14 @@
     height: 100vh;
   }
   .bubble-container .input-wrap textarea {
-    margin: 0;
-    width: calc(100% - 30px);
-  }
+    width: calc(100% - 12%);
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 4%;
+    margin-bottom: 3%;
+    resize: none;
+    overflow:hidden;
+}
   </style>
 </head>
 <body>
@@ -58,8 +63,8 @@ else{
 }
 ?>	
 
-<header>Chatbot</header>
-<button onclick="start_the_service()" id="mn-btn">Chat</button>
+<!-- <header>Chatbot</header> -->
+<button onclick="start_the_service()" id="mn-btn"><img src="image/chat.png"></button>
 <!-- import the JavaScript file -->
 <center>
   <img src="image/bot1.png" style="height:40vh;margin: 10vh;">
@@ -70,7 +75,6 @@ else{
 <?php
 	echo "<center>";
 	echo "<a href='about.php'>View User Details</a><br/><br/>";
-	echo "<a href='order.php'>My Order</a><br/><br/>";
 
 	echo "<form method='post'><input type='submit' value='Logout' name='logout'></form>";
 	echo "</center>";

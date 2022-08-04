@@ -16,7 +16,6 @@ class db{
 		mysqli_select_db($this->conn,"support");
 	}
 	public function getUser($username,$password){
-		echo "hello";
 		$sql="SELECT user_id,username,password from user where username='$username' and password='$password' LIMIT 1";
 		$result=mysqli_query($this->conn,$sql); 
 		return $result;
