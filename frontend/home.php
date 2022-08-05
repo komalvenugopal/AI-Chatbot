@@ -63,6 +63,8 @@ else{
 }
 ?>	
 
+<p id="reply" style="display:none">Default</p>
+
 <!-- <header>Chatbot</header> -->
 <button onclick="start_the_service()" id="mn-btn"><img src="image/chat.png"></button>
 <!-- import the JavaScript file -->

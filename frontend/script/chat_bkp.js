@@ -37,13 +37,13 @@ var chatWindow = new Bubbles(document.getElementById("chat"), "chatWindow", {
       return text.toLowerCase().replace(/[\s.,\/#!$%\^&\*;:{}=\-_'"`~()]/g, "")
     }
     // search function
-    // o.convo[o.standingAnswer].reply.forEach(function(e, i) {
-    //   strip(e.question).includes(strip(o.input)) && o.input.length > 0
-    //     ? (found = e.answer) : found 
-    // })
+    o.convo[o.standingAnswer].reply.forEach(function(e, i) {
+      strip(e.question).includes(strip(o.input)) && o.input.length > 0
+        ? (found = e.answer) : found 
+    })
         
     // predict("Hi").then(val => console.log(val))
-    console.log(o.convo);
+    // console.log(o.convo);
     // o.convo[o.standingAnswer].says=predict()
     // match("physics")
   }

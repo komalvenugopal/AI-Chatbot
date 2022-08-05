@@ -22,24 +22,6 @@ var convo = {
         answer: "ice-cream"
       }
     ]
-  },
-  banana: {
-    says: ["🍌"],
-    reply: [
-      {
-        question: "Start Over",
-        answer: "ice"
-      }
-    ]
-  },
-  "ice-cream": {
-    says: ["🍦"],
-    reply: [
-      {
-        question: "Start Over",
-        answer: "ice"
-      }
-    ]
   }
 }
 
@@ -47,7 +29,7 @@ var convo = {
 
 var chatWindow = new Bubbles(document.getElementById("chat"), "chatWindow", {
   inputCallbackFn: function(o) {
-    console.log(o.input );
+    console.log(2);
     var miss = function() {
       chatWindow.talk(
         {
@@ -64,7 +46,23 @@ var chatWindow = new Bubbles(document.getElementById("chat"), "chatWindow", {
         "i-dont-get-it"
       )
     }
-    miss()
+    console.log(o.input);
+    predict(o.input).then(function(val) {var answer=val;  document.getElementById("reply").innerHTML=answer;});
+    reply=document.getElementById("reply").innerHTML;
+    chatWindow.talk(
+      {
+        "backend": {
+          says: [
+            reply
+          ],
+          reply:  [{
+            question: "Start Over",
+            answer: "ice"
+          }]
+        }
+      },
+      "backend"
+    )    
   }
 })
 

@@ -1,0 +1,39 @@
+{
+    "questions":
+    {
+        "Campaign Creation":
+        {
+            "questions":
+            {
+                "How to edit the campaign": 
+                {
+                    "answer": "Got to campaigns page and delete it"
+                }
+            }
+        },
+        "Asset Sources":
+        {
+            "questions":
+            {
+                "How to update the Asset Source":
+                {
+                    "questions":
+                    {
+                        "Adding New Asset Source":
+                        {
+                            "answer": "Got to add tab and add it from there"
+                        },
+                        "Deleting the Asset source":
+                        {
+                            "answer": "Go to Assets Page and delete it"   
+                        }
+                    }
+                },
+                "Uploading the Asset Source":
+                {
+                    "answer": "Upload it from the button"
+                }
+            }
+        }
+    }
+}

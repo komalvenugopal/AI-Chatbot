@@ -31,6 +31,7 @@ function Bubbles(container, self, options) {
     }
   }
   var localStorageAvailable = localStorageCheck() && recallInteractions > 0
+  // console.log(localStorageAvailable);
   var interactionsLS = "chat-bubble-interactions"
   var interactionsHistory =
     (localStorageAvailable &&
@@ -96,9 +97,10 @@ function Bubbles(container, self, options) {
           function() {},
           "reply reply-freeform"
         )
+        // console.log(lastBubble);
+        // console.log(this.value);
+        // console.log(standingAnswer);
         console.log(this.value);
-        console.log(standingAnswer);
-        // callback
         typeof callbackFn === "function"
           ? callbackFn({
               input: this.value,
@@ -275,7 +277,9 @@ function Bubbles(container, self, options) {
       posted()
 
       // save the interaction
+      // console.log(say);
       interactionsSave(say, reply)
+      // console.log(say);
       !iceBreaker && interactionsSaveCommit() // save point
 
       // animate scrolling
@@ -343,3 +347,9 @@ if (typeof exports !== "undefined") {
   exports.Bubbles = Bubbles
   exports.prepHTML = prepHTML
 }
+
+
+
+// class="bubble reply say bubble-hidden"
+// class="bubble reply say bubble-picked"
+// class="bubble reply reply-freeform say"
