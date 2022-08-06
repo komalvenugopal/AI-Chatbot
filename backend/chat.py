@@ -11,10 +11,10 @@ import os
 print(os.getcwd())
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-with open('training/intents.json', 'r') as json_data:
+with open('files/intents.json', 'r') as json_data:
     intents = json.load(json_data)
 
-FILE = "training/data.pth"
+FILE = "files/data.pth"
 data = torch.load(FILE)
 
 model_state = data["model_state"]

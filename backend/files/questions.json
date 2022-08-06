@@ -1,0 +1,82 @@
+{
+    "questions":
+    {
+        "HOW TO CREATE DCO READY CREATIVE MASTERS":
+        {
+            "questions":
+            {
+                "What is a Creative Master": 
+                {
+                    "answer": "A Creative Master is a single, animated creative design with common elements that allows for multiple creative variations within that design. Creative variations can have different images and copy that appear based on specific dynamic triggers. An ad must include at least one creative master per ad size. There can be multiple creative masters per size that have different animations and numbers of frames. Below are two sets of creative masters in three ad sizes, made up of two frames each. Creative Master 1 is using one set of assets for the Female - Hiking - Sunny creative variation of this Trek brand ad. Creative Master 2 is another design, using assets for the Male- Running - Cloudy variation. A new Creative Master is required when elements such as animation, number of frames, position of elements, additional images, and image sizes differ from the original creative master. In Creative Master 2, an additional orange rectangle has been added behind the headline text, the product image is cropped, and the CTA button has a different design. It may also animate differently, such as having the headline text slide in instead of fading in. https://userguides.jivox.com/jivox-user-guide/What-is-a-Creative-Master"
+                },
+                "What are Assets":{
+                    "answer": "Assets can be text, images, and videos. Text or copy for each creative variation should be included in a spreadsheet. Images can be in JPG or PNG format. Video files should be in MP4 format. Below are assets for the 160x600 Trek ad. (Purple dashed line indicates transparent image bounds) n this example, there are 8 Background Image assets (4 shown), 4 Product Image assets, 8 text options for Product Name copy, 8 text options for Price copy, and 2 text options for Headline copy. https://userguides.jivox.com/jivox-user-guide/What-are-Assets"
+                },
+                "What are Creative Variations":
+                {
+                    "answer":"A Creative Variation is based on a creative master, where specific text, images, or video are dynamically swapped out to form each variation. The selection of the creative variation could be based on rotation or driven by specified data conditions. Below are all creative variations for the 160x600 Trek ad, based on the original creative master. https://userguides.jivox.com/jivox-user-guide/What-are-Creative-Variations"
+                },
+                "Personalized Dynamic Creative - Visual Workflow":
+                {
+                    "answer":"The formation of a personalized creative variation begins with the creative master that serves as the base design. Next, decisioning determines the appropriate assets to dynamically swap based on the data triggers. In this example, the data triggers are gender, interest, and weather The decisioning engine chooses: background image based on gender (male), interest (running) and weather sunny) product details - image, name, price- based on gender (male) and interest (running) headline copy based on interest running) https://userguides.jivox.com/jivox-user-guide/Personalized-Dynamic-Creative-Visual-Workflow"
+                },
+                "Adobe Animate - Setup":
+                {
+                    "answer":"The Jivox platform identifies images by their file names and text as their Symbol Names in the published Animate HTML file. ( Image feeds should not be used with Animate. ) Use consistent library asset, symbol, and instance names across sizes: f1_copy1, f1_copy2, bg1, bg2. Set live text elements as Dynamic Text if that text will be dynamically varied by the Jivox platform, and enter a unique Instance Name in the Properties panel. Convert dynamic text to Symbols prior to animation and set a matching Instance Name. Right-click Convert to Symbol... This enables the use of Scale to Fit and Vertical Align features in the platform. Google Fonts or custom web-safe fonts (see next page) should be used for dynamic text. https://userguides.jivox.com/jivox-user-guide/Adobe-Animate-Setup"
+                },
+                "Vector Shape Colors":
+                {
+                    "amswer":"Open the JS file in a text/code editor and locate the layer name of the shape element. In this case, box1 is the layer name (// box1). Add the first line of code (var box1_shapeColor..) before the shape layer name. The variable name (var) should be unique for each element. box1_shapeColorColumn is the unique dynamic element column header name used in the Asset Source. Change AssetSourceName to the name used in the campaign. Change the default hex color value (#00FF00 ) to the one used in the Animate file."
+                },
+                "Google Web Designer - Setup":
+                {
+                    "answer":"Images and text elements are dynamic-ready. The Jivox platform identifies images and text elements by their unique ID names as defined in the Properties panel. Images automatically get IDs based on filenames, while text element IDs need to be set. Use consistent dynamic element ID names across sizes:. f1copy1, f1_copy2, bg1, bg2, etc. Google Fonts or custom web-safe fonts (see next page) should be used for dynamic text. Wrapping/ Grouping Elements Multiple dynamic image and text elements can be Wrapped within a <div> element to animate together. Select two or more elements, Right-click the elements Wrap. Only static (non-dynamic) elements may be Grouped (Right-click> Create group..). Dynamic elements will not be dynamically swappable if grouped. Clickthrough Function (Click/Touch) Add one Tap Area element from the Components panel > Interaction folder and resize it as necessary. Right-click on Tap Area element, select Add event... Select Event Mouse> click, and Action: Custom. Enter function name after gwd, such as jivoxClick. Add jvxAd.openClickThrough0: in white input box. Follow the same steps for Event Touch touchend using the same Tap Area and jivoxClick function. https://userguides.jivox.com/jivox-user-guide/Google-Web-Designer-Setup"
+                },
+                "Google Web Designer - Custom Fonts ":
+                {
+                    "answer":"Create a fonts folder within the project folder of your GWD HTML file. Within the fonts folder, include all available web-safe font file formats (TTF, wOFF, WOFF2, sVG). In the Code view, add a <style> tag with CSS @font-face declarations within the <head> element of the HTML file. https://userguides.jivox.com/jivox-user-guide/Google-Web-Designer-Custom-Fonts"
+                },
+                "Creative Master Guidelines - Custom HTML/Other Tools":
+                {
+                    "amswer":"Each creative master should be represented by a single HTML creative per ad size. Dynamic images should share the same dimensions and aspect ratio as the base assets in the master. Dynamic text elements should use Google Fonts or other web-safe fonts (TTF, WOFF, WOFF2, SVG). Copy for each creative variation should fit in approximately the same space as the others, including number of lines. A block of copy can be created as one text element for multiple lines or it can be split into one text element per line, for more control over the flow of copy. This would be determined when designing the creative master Copy within a single text element should generally have the same font size*, weight, line height, and colork*, The max and min lengths of copy should be tested in the creative master to ensure the text is flowing correctly and not overlapping other elements. If text is found to be overlapping, the code may need to be edited and may delay ad production. "
+                },
+                "Jivox Creative Master Export Setup (For DCS Support)":
+                {
+                    "answer":"Jivox enables personalization and interactions on the Custom HTML5 creatives if it follows Jivox Creative Master Export Format. Once the creative is uploaded into our platform, the individual components (images, text and its colors) are identified as dynamic elements. Specify the unique identifier (id) and type (data-el-type, image/text) for each dynamic element as shown below. https://userguides.jivox.com/jivox-user-guide/jivox-creative-master-export-setup--for-dcs-support-"
+                },
+                "Adobe After Effects - Setup":
+                {
+                    "answer":"Imported image and video (footage) files are dynamic-ready (total file size less than 100MB). Imported footage files are identified in the AEPX and Jivox platform with the names as they appear in the Project panel in AE, where they can be modified. The files will retain their original names when collected into the project folder. Text layers should have unique layer names that map to column names in the asset source: copy1, copy2 Expressions should reference text layer index numbers instead of text layer names. Text layer names are changed when swapping source text dynamically, causing the reference in the expression to be invalid. Use Point Text elements for single-line copy or copy that with specific line breaks. Use Paragraph Text elements for multi-line copy that will auto-wrap, based on the bounding box. Reduce the project to only include assets and subcomps used by the main composition to be rendered. Select the main composition in the Project panel Go to File > Dependencies Reduce Project  https://userguides.jivox.com/jivox-user-guide/Adobe-After-Effects-Setup"
+                },
+                "Adobe After Effects - Advanced features":
+                {
+                    "answer":"Create a Text layer by selecting the Type Tool (CMD +T) and clicking (Point Text). Or go to Layer > New> Text, which creates a Point Text layer by default. Add any required line breaks to the asset source by yping Option +Return in a spreadsheet cell, as Point Text layers do not auto-wrap text to the next line. Enter the text to be displayed and adjust the styling (one font size, one style, no specific superscript or subscript characters, etc. per text element). Open the Transform» Scale property for the Text layer. Option+ click the Stopwatch icon and enter the following code in the expression input window on the timeline. Press the Num Enter key or click outside of the input window to save changes. Use the Anchor Point property expression for alignment if necessary. https://userguides.jivox.com/jivox-user-guide/Adobe-After-Effects-Advanced-Features"
+                }
+            }
+        },
+        "Asset Sources":
+        {
+            "questions":
+            {
+                "How to update the Asset Source":
+                {
+                    "questions":
+                    {
+                        "Adding New Asset Source":
+                        {
+                            "answer": "Got to add tab and add it from there"
+                        },
+                        "Deleting the Asset source":
+                        {
+                            "answer": "Go to Assets Page and delete it"   
+                        }
+                    }
+                },
+                "Uploading the Asset Source":
+                {
+                    "answer": "Upload it from the button"
+                }
+            }
+        }
+    }
+}

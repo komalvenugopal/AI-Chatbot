@@ -1,5 +1,5 @@
 import json
-json_data=open('training/questions.json', 'r')
+json_data=open('files/questions.json', 'r')
 data=dict(json.load(json_data))
 d=data.copy()
 
