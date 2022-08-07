@@ -26,7 +26,7 @@ def bag_of_words(tokenized_sentence, words):
 
 
 conn = pymysql.connect(
-        host='db.dev.jivox.com',
+        host='18.211.76.28',
         user='root',
         password = "Jivoxdb",
         )

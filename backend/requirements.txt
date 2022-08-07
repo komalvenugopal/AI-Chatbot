@@ -7,4 +7,6 @@ gensim
 numpy
 matplotlib
 scikit-learn
+pandas
+pymysql
 #nltk.download('punkt')
