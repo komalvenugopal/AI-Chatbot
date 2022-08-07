@@ -82,5 +82,5 @@ def get_question_recommendation(question_idx):
         recommended_questions.append(recommended_question)
     return recommended_questions
 
-reco= get_question_recommendation(1)
-print(reco)
+# reco= get_question_recommendation(1)
+# print(reco)
