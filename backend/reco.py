@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from scipy.sparse import csr_matrix
 from sklearn.neighbors import NearestNeighbors
 from utils import mysqlselect
-import random
+import random,logging
 
 interactions=mysqlselect("select user_id,question_id from `eam_brb_tmp`.CHATBOT_INTERACTIONS")
 interactions=dict(Counter(interactions))

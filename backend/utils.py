@@ -5,9 +5,11 @@ import nltk
 from nltk.stem.porter import PorterStemmer
 import json
 from torch import rand
-import pymysql,ast
+import pymysql,ast,logging
 
 stemmer = PorterStemmer()
+log = logging.getLogger(__name__)
+
 def tokenize(sentence):
     return nltk.word_tokenize(sentence)
 
@@ -26,8 +28,8 @@ def bag_of_words(tokenized_sentence, words):
 
 
 conn = pymysql.connect(
-        # host='18.211.76.28',
-        host='db.dev.jivox.com',
+        host='18.211.76.28',
+        # host='db.dev.jivox.com',
         user='root',
         password = "Jivoxdb",
         )
@@ -66,7 +68,10 @@ def get_intents():
         dict["intents"].append(temp)
     temp=json.dumps(dict,indent=4)
     f.write(temp)
-    return
+    log.info("Created the questsions local file")
+    json_data=open('files/intents.json', 'r')
+    intents = json.load(json_data)
+    return intents
 
 def push_intents(data):
     tag= str(data ["tag"])
@@ -75,6 +80,9 @@ def push_intents(data):
     args=(tag,pattern,responses)
     mysqlinsert("insert into `eam_brb_tmp`.QUESTION (tag,pattern,response) values(%s,%s,%s)",args)
 
+def push_interaction():
+    
+    return
 
 # f=open("files/intents.json", "r")
 # data=dict(json.load(f))["intents"]

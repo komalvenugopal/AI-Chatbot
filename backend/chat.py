@@ -2,18 +2,13 @@ import random
 import json
 import logging
 import torch
-
+import os
 from model import NeuralNet
 from utils import bag_of_words, tokenize, get_intents
 
-
-import os
-print(os.getcwd())
+log = logging.getLogger(__name__)
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-with open('files/intents.json', 'r') as json_data:
-    intents = json.load(json_data)
-
 FILE = "files/data.pth"
 data = torch.load(FILE)
 
@@ -31,18 +26,16 @@ model.eval()
 bot_name = "Jivox"
 
 def get_response(msg):
-    log = logging.getLogger(__name__)
     log.info("Recived Message: %s",msg)
+    intents=get_intents()
     sentence = tokenize(msg)
     X = bag_of_words(sentence, all_words)
     X = X.reshape(1, X.shape[0])
     X = torch.from_numpy(X).to(device)
-
     output = model(X)
     _, predicted = torch.max(output, dim=1)
     
     response={}
-
     tag = tags[predicted.item()]    
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
@@ -50,9 +43,13 @@ def get_response(msg):
         for intent in intents['intents']:
             if tag == intent["tag"]:
                 response["tag"]= tag
-                response["answer"]=random.choice(intent['responses'])                
+                response["answer"]=random.choice(intent['responses'])
+                log.info(response)
                 return response
-    return "I do not understand..."
+    else:
+        response["tag"]= ""
+        response["answer"]="I do not understand..."
+    return response
 
 
 if __name__ == "__main__":
@@ -61,6 +58,5 @@ if __name__ == "__main__":
         sentence = input("Hi, How can I help you: ")
         if sentence == "quit":
             break
-
         resp = get_response(sentence)
         print(resp)
