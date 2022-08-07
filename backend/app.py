@@ -4,7 +4,7 @@ import logging
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from utils import push_interaction
-from utils import mysqlselect,get_intents
+from utils import mysqlselect,get_intents,check_user
 from chat import get_response
 from reco import get_question_recommendation
 
@@ -20,9 +20,12 @@ def predict():
         response = get_response(text)
 
         tag=response["tag"]
+        userid=args["userid"]
 
-        push_interaction(tag,args["userid"])
+        if(check_user(userid)==False):
+            return "User Doesnt Exist"
 
+        push_interaction(tag,userid)        
         if(tag!=""):
             answer=mysqlselect("select id from `eam_brb_tmp`.QUESTION where tag="+"'"+tag+"'")
             # log.info('Answer: ', answer[0][0])

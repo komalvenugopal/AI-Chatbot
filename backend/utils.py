@@ -83,11 +83,18 @@ def push_intents(data):
 
 def push_interaction(tag,userid):
     if(tag!=""):
-        questionid=mysqlselect("select id from `eam_brb_tmp`.QUESTION where tag='{}'".format(tag))   
+        questionid=mysqlselect("select id from `eam_brb_tmp`.QUESTION where tag='{}'".format(tag))
         questionid=questionid[0][0]
         mysqlinsert("insert into `eam_brb_tmp`.CHATBOT_INTERACTIONS (user_id,question_id) values(%s,%s)",(int(userid),int(questionid)))
     log.info("Pushed the interaction: %s, %s", (userid,questionid))
     return
+
+def check_user(userid):
+    if(userid!=""):
+        user_id=mysqlselect("select id from `eam_brb_tmp`.PERSON where ID='{}'".format(userid))
+    if(len(user_id)==0):
+        return False
+    return True
 
 # mysqlinsert("insert into `eam_brb_tmp`.CHATBOT_INTERACTIONS (user_id,question_id) values(%s,%s)",(int('2'),int(1)))
 
