@@ -30,9 +30,7 @@ def predict():
             log.info('Posted the answer %s', message)
             return jsonify(message)
         else:
-            print("output")
             message = {"answer": response["answer"],"recommendations":get_question_recommendation(1)}
-            print(message)
             log.info('Didnt find the answer %s', message)
             return jsonify(message)
             
