@@ -7,9 +7,6 @@ from utils import mysqlselect,get_intents
 from chat import get_response
 from reco import get_question_recommendation
 
-with open("properties.yaml", "r") as config:
-    config=yaml.safe_load(config)
-
 app = Flask(__name__)
 CORS(app)
 

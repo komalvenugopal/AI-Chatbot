@@ -1,3 +1,8 @@
 "cognito": 
     "userpool":
         "id" : 123
+"db":
+    "username" : "root"
+    "password" : "Jivoxdb"
+    "host"  : "db.dev.jivox.com"
+    # "host"  : "18.211.76.28"

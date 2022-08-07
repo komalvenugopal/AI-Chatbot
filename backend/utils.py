@@ -5,10 +5,19 @@ import nltk
 from nltk.stem.porter import PorterStemmer
 import json
 from torch import rand
-import pymysql,ast,logging
+import pymysql,ast,logging,yaml
 
 stemmer = PorterStemmer()
 log = logging.getLogger(__name__)
+
+config_file=open("properties.yaml", "r")
+config=yaml.safe_load(config_file)
+
+conn = pymysql.connect(
+        host=config["db"]["host"],
+        # host='db.dev.jivox.com',
+        user=config["db"]["username"],
+        password = config["db"]["password"])
 
 def tokenize(sentence):
     return nltk.word_tokenize(sentence)
@@ -25,14 +34,6 @@ def bag_of_words(tokenized_sentence, words):
         if w in sentence_words: 
             bag[idx] = 1
     return bag
-
-
-conn = pymysql.connect(
-        host='18.211.76.28',
-        # host='db.dev.jivox.com',
-        user='root',
-        password = "Jivoxdb",
-        )
 
 def mysqlselect(s):
     try:
