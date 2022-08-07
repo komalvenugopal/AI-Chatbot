@@ -12,7 +12,7 @@ CORS(app)
 with open("properties.yaml", "r") as config:
     config=yaml.safe_load(config)
 
-@app.post("/reco/predict", methods=['GET','POST'])
+@app.route("/reco/predict", methods=['GET','POST'])
 def predict():
     try:
         body=request.get_json()
