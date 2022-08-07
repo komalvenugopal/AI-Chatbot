@@ -26,9 +26,9 @@ def bag_of_words(tokenized_sentence, words):
 
 
 conn = pymysql.connect(
-        host='127.0.0.1',
+        host='db.dev.jivox.com',
         user='root',
-        password = "",
+        password = "Jivoxdb",
         )
 
 def mysqlselect(s):
@@ -56,7 +56,7 @@ def mysqlinsert(s,args):
 def get_intents():
     f=open("files/intents.json", "w")
     dict={"intents":[]}
-    questions=mysqlselect("select * from `eam_brb`.QUESTION")
+    questions=mysqlselect("select * from `eam_brb_tmp`.QUESTION")
     for i in questions:
         temp={}
         temp["tag"]=i[1]
@@ -72,7 +72,7 @@ def push_intents(data):
     pattern= json.dumps(eval(str(data ["patterns"])))
     responses=json.dumps(eval(str(data ["responses"])))
     args=(tag,pattern,responses)
-    mysqlinsert("insert into `eam_brb`.QUESTION (tag,pattern,response) values(%s,%s,%s)",args)
+    mysqlinsert("insert into `eam_brb_tmp`.QUESTION (tag,pattern,response) values(%s,%s,%s)",args)
 
 
 # f=open("files/intents.json", "r")

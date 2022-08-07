@@ -7,11 +7,11 @@ from sklearn.neighbors import NearestNeighbors
 from utils import mysqlselect
 import random
 
-interactions=mysqlselect("select user_id,question_id from `eam_brb`.CHATBOT_INTERACTIONS")
+interactions=mysqlselect("select user_id,question_id from `eam_brb_tmp`.CHATBOT_INTERACTIONS")
 interactions=dict(Counter(interactions))
 
 questions_dataset=[]
-questions=mysqlselect("select id,pattern from `eam_brb`.QUESTION")
+questions=mysqlselect("select id,pattern from `eam_brb_tmp`.QUESTION")
 for i in questions:
     questions_dataset.append(list(i))
 
@@ -75,7 +75,7 @@ def get_question_recommendation(question_idx):
     recommended_questions=[]
     for val in rec_question_indices:
         question_idx = int(final_dataset.iloc[val[0]]['question_id'])
-        recommended_question=mysqlselect("select pattern from `eam_brb`.QUESTION where id={}".format(question_idx))        
+        recommended_question=mysqlselect("select pattern from `eam_brb_tmp`.QUESTION where id={}".format(question_idx))        
         recommended_question= eval(recommended_question[0][0])
         recommended_question= recommended_question[random.randint(0,len(recommended_question)-1)]
         # print(recommended_question)

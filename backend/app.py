@@ -19,7 +19,7 @@ def predict():
     text = body.get("message")
     response = get_response(text)
     tag=response["tag"]
-    s=mysqlselect("select id from `eam_brb`.QUESTION where tag="+"'"+tag+"'")
+    s=mysqlselect("select id from `eam_brb_tmp`.QUESTION where tag="+"'"+tag+"'")
     recommendations= get_question_recommendation(s[0][0])
     # message = {"answer": response["answer"]}
     message = {"answer": response["answer"],"recommendations":recommendations}
