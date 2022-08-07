@@ -1,31 +1,13 @@
 find questions similar to faq database
-
-
-
-
-
-enable local storage
-
-multiple conversations / pages
-multiple option picker
 sound/livechat
-
-https://jivox-support-login.dev2.jivox.com/oauth2/authorize?client_id=52ge30ca2tmlpratja48dqatfa&response_type=code&scope=email+openid&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Flogged_in.html
-
-Priority TODO:
-1. access to the chatbot page only after loggin in
-2. the api should be secured with the api_token
-api key should be hidden while sending request to backend
-
-Pending Tasks:
-1. integrate fluent bit for logs
-2. record activity in the portal
-
-Project expansion:
-1. outside jivox portal email validation with db to fetch conversations
-
+record activity in portal
+live notifications
 
 #https://www.youtube.com/watch?v=RpWeNzfSUHw&ab_channel=PythonEngineer
+#https://www.mygreatlearning.com/blog/masterclass-on-movie-recommendation-system/
+
+dont allow ',",
+
 
 Presentation:
   Notes:
@@ -75,3 +57,20 @@ function make_table() {
 w.document.write(table); 
 }
 make_table()
+
+
+import json
+json_data=open('files/questions.json', 'r')
+data=dict(json.load(json_data))
+d=data.copy()
+
+while(True):
+    try:
+        d=d["questions"]
+        print(d,"\n","\n")
+        s=input()
+        d=d[s]
+        
+    except:
+        print(d["answer"])
+        break

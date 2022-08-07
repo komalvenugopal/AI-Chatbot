@@ -4,7 +4,7 @@ import logging
 import torch
 
 from model import NeuralNet
-from utils import bag_of_words, tokenize
+from utils import bag_of_words, tokenize, get_intents
 
 
 import os
@@ -40,16 +40,18 @@ def get_response(msg):
 
     output = model(X)
     _, predicted = torch.max(output, dim=1)
+    
+    response={}
 
-    tag = tags[predicted.item()]
-
+    tag = tags[predicted.item()]    
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:
-                return random.choice(intent['responses'])
-    
+                response["tag"]= tag
+                response["answer"]=random.choice(intent['responses'])                
+                return response
     return "I do not understand..."
 
 

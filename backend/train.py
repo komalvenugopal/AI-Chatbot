@@ -8,11 +8,11 @@ import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 
-from utils import bag_of_words, tokenize, stem
+from utils import bag_of_words, tokenize, stem, get_intents
 from model import NeuralNet
-from generate_intents import generate_intents
 
-generate_intents()
+
+get_intents()
 with open('files/intents.json', 'r') as f:
     intents = json.load(f)
 

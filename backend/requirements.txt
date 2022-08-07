@@ -4,4 +4,7 @@ torchvision
 torch
 nltk 
 gensim
+numpy
+matplotlib
+scikit-learn
 #nltk.download('punkt')
