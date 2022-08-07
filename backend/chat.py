@@ -4,7 +4,7 @@ import logging
 import torch
 import os
 from model import NeuralNet
-from utils import bag_of_words, tokenize, get_intents
+from utils import bag_of_words, tokenize, get_intents, mysqlselect
 
 log = logging.getLogger(__name__)
 
@@ -43,7 +43,7 @@ def get_response(msg):
         for intent in intents['intents']:
             if tag == intent["tag"]:
                 response["tag"]= tag
-                response["answer"]=random.choice(intent['responses'])
+                response["answer"]=random.choice(intent['responses'])                
                 log.info(response)
                 return response
     else:

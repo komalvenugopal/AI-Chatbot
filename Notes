@@ -1,4 +1,8 @@
-insert interactions to database
+read implementation
+insert interactions in db
+train with correct data
+store model for faster access
+
 sound/livechat
 record activity in portal
 live notifications
@@ -6,23 +10,13 @@ live notifications
 #https://www.youtube.com/watch?v=RpWeNzfSUHw&ab_channel=PythonEngineer
 #https://www.mygreatlearning.com/blog/masterclass-on-movie-recommendation-system/
 
-dont allow ',",
-
 
 Presentation:
   Notes:
     - Rule based Vs Self learning chatbots
     - See other algorithms for chatbot
     - Why bag of words is used in ml count vectorizers #bag_of_words #tfidf #word2vec
-  
-  Useful For:
-    see if we can do deployment
-    see active clients currently
-    reduce cost from 3rd party support tools
-    provide recomendationds based on user activity
-    Notifications and guser_idances for new updates and releases 
-    Documentation can be added and search the documentation from chatbot itself
-    
+      
   Resources Required:
     1. rds
     2. Cognito, Dynamodb

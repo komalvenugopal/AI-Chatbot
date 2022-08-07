@@ -3,6 +3,7 @@ import yaml
 import logging
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+from utils import push_interaction
 from utils import mysqlselect,get_intents
 from chat import get_response
 from reco import get_question_recommendation
@@ -19,6 +20,9 @@ def predict():
         response = get_response(text)
 
         tag=response["tag"]
+
+        push_interaction(tag,args["userid"])
+
         if(tag!=""):
             answer=mysqlselect("select id from `eam_brb_tmp`.QUESTION where tag="+"'"+tag+"'")
             # log.info('Answer: ', answer[0][0])
@@ -30,7 +34,7 @@ def predict():
             message = {"answer": response["answer"],"recommendations":get_question_recommendation(1)}
             log.info('Didnt find the answer %s', message)
             return jsonify(message)
-            
+        
     except Exception as e:
         app.logger.critical(e)
 

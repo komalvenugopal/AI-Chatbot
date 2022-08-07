@@ -81,9 +81,18 @@ def push_intents(data):
     args=(tag,pattern,responses)
     mysqlinsert("insert into `eam_brb_tmp`.QUESTION (tag,pattern,response) values(%s,%s,%s)",args)
 
-def push_interaction():
-    
+def push_interaction(tag,userid):
+    if(tag!=""):
+        questionid=mysqlselect("select id from `eam_brb_tmp`.QUESTION where tag='{}'".format(tag))   
+        questionid=questionid[0][0]
+        print("asd",questionid)
+        mysqlinsert("insert into `eam_brb_tmp`.CHATBOT_INTERACTIONS (user_id,question_id) values(%s,%s)",(int(userid),int(questionid)))
+    log.info("Pushed the interaction: %s, %s", (userid,questionid))
     return
+
+# mysqlinsert("insert into `eam_brb_tmp`.CHATBOT_INTERACTIONS (user_id,question_id) values(%s,%s)",(int('2'),int(1)))
+
+# push_interaction({"userid":1,"question_id":2})
 
 # f=open("files/intents.json", "r")
 # data=dict(json.load(f))["intents"]
