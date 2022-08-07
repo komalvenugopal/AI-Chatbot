@@ -85,7 +85,6 @@ def push_interaction(tag,userid):
     if(tag!=""):
         questionid=mysqlselect("select id from `eam_brb_tmp`.QUESTION where tag='{}'".format(tag))   
         questionid=questionid[0][0]
-        print("asd",questionid)
         mysqlinsert("insert into `eam_brb_tmp`.CHATBOT_INTERACTIONS (user_id,question_id) values(%s,%s)",(int(userid),int(questionid)))
     log.info("Pushed the interaction: %s, %s", (userid,questionid))
     return
