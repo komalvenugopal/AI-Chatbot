@@ -4,6 +4,6 @@
 "db":
     "username" : "root"
     "password" : "Jivoxdb"
-    # "host"  : "db.dev.jivox.com"
+    "host"  : "db.dev.jivox.com"
     # "password" : "Jivoxdb"
     # "host": "127.0.0.1"
