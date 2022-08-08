@@ -5,5 +5,5 @@
     "username" : "root"
     "password" : "Jivoxdb"
     "host"  : "db.dev.jivox.com"
-    # "host"  : "18.211.76.28"
+    # "password" : ""
     # "host": "127.0.0.1"

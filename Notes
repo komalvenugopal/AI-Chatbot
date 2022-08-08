@@ -1,7 +1,5 @@
 read implementation
-insert interactions in db
 train with correct data
-store model for faster access
 
 sound/livechat
 record activity in portal
