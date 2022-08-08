@@ -2,7 +2,7 @@ import json
 import yaml
 import logging
 from flask import Flask, jsonify, request
-from flask_cors import CORS
+from flask_cors import CORS,cross_origin
 from utils import push_interaction
 from utils import mysqlselect,get_intents,check_user
 from chat import get_response
@@ -10,7 +10,7 @@ from reco import get_question_recommendation
 
 app = Flask(__name__)
 CORS(app,resources={r"/*": {"origins": "*"}})
-app.config['CORS_HEADERS'] = 'Content-Type'
+app.config['CORS_ALLOW_HEADERS'] = 'Content-Type'
 
 @app.route("/reco/predict", methods=['GET','POST'])
 def predict():
