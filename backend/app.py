@@ -9,7 +9,8 @@ from chat import get_response
 from reco import get_question_recommendation
 
 app = Flask(__name__)
-CORS(app)
+CORS(app,resources={r"/*": {"origins": "*"}})
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 @app.route("/reco/predict", methods=['GET','POST'])
 def predict():
