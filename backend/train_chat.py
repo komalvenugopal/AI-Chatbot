@@ -2,15 +2,24 @@ import sys, os
 
 import numpy as np
 import random
-import json
+import json,nltk,string
 
 import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 
 from utils import bag_of_words, tokenize, stem, get_intents
+import utils
 from model import NeuralNet
+from utils import get_pos_tag
+from nltk import pos_tag
+from nltk.stem import WordNetLemmatizer 
+# nltk.download('stopwords') 
+# nltk.download('wordnet') 
+# nltk.download('omw-1.4')
+# nltk.download('averaged_perceptron_tagger')
 
+lemmatizer=WordNetLemmatizer()
 
 get_intents()
 with open('files/intents.json', 'r') as f:
@@ -31,11 +40,11 @@ for intent in intents['intents']:
         all_words.extend(w)
         # add to xy pair
         xy.append((w, tag))
+    
+all_words = [lemmatizer.lemmatize(w,pos=get_pos_tag(pos_tag([w])[0][1])) for w in all_words if w.lower() not in utils.ignore_words]
+# print(all_words)
 
-# stem and lower each word
-ignore_words = ['?', '.', '!']
-all_words = [stem(w) for w in all_words if w not in ignore_words]
-# remove duplicates and sort
+# # remove duplicates and sort
 all_words = sorted(set(all_words))
 tags = sorted(set(tags))
 

@@ -3,7 +3,7 @@ from urllib import response
 import numpy as np
 import nltk
 from nltk.stem.porter import PorterStemmer
-import json
+import json, string
 from torch import rand
 import pymysql,ast,logging,yaml
 
@@ -26,9 +26,33 @@ def tokenize(sentence):
 def stem(word):
     return stemmer.stem(word.lower())
 
+from nltk.stem import WordNetLemmatizer 
+from nltk.corpus import wordnet
+from nltk import pos_tag
+from nltk.corpus import stopwords
+from nltk.corpus import wordnet
+
+en_stops = set(stopwords.words('english')) 
+punc=list(string.punctuation)
+ignore_words=list(en_stops)+list(punc)
+lemmatizer=WordNetLemmatizer()
+
+def get_pos_tag(tag):
+    tag=tag.upper()
+    if tag.startswith("J"):
+        return wordnet.ADJ
+    elif tag.startswith("V"):
+        return wordnet.VERB
+    elif tag.startswith("N"):
+        return wordnet.NOUN
+    elif tag.startswith("R"):
+        return wordnet.ADV
+    else:
+        return wordnet.NOUN
+
 
 def bag_of_words(tokenized_sentence, words):
-    sentence_words = [stem(word) for word in tokenized_sentence]
+    sentence_words = [lemmatizer.lemmatize(w,pos=get_pos_tag(pos_tag([w])[0][1])) for w in tokenized_sentence if w.lower() not in ignore_words]
     bag = np.zeros(len(words), dtype=np.float32)
     for idx, w in enumerate(words):
         if w in sentence_words: 
@@ -89,7 +113,7 @@ def push_interaction(tag,userid):
         userid=int(userid)
         mysqlinsert("insert into `eam_brb_tmp`.CHATBOT_INTERACTIONS (user_id,question_id) values(%s,%s)",(userid,questionid))
         log.info("Pushed the interaction: %s, %s", userid,questionid)
-    return
+    return "Pushed"
 
 def check_user(userid):
     if(userid!=""):
@@ -98,7 +122,9 @@ def check_user(userid):
         return False
     return True
 
-# mysqlinsert("insert into `eam_brb_tmp`.CHATBOT_INTERACTIONS (user_id,question_id) values(%s,%s)",(int('2'),int(1)))
+# for i in range(1000):
+#     from random import randint
+#     mysqlinsert("insert into `eam_brb_tmp`.CHATBOT_INTERACTIONS (user_id,question_id) values(%s,%s)",(randint(1,50),randint(1,71)))
 
 # push_interaction({"userid":1,"question_id":2})
 
@@ -108,6 +134,18 @@ def check_user(userid):
 #     i["tag"]=i["patterns"][0].replace(" ","_")
 #     push_intents(i)
 #train the model after changing it    
+
+# while(True):
+#     import json
+#     m=input("Question: ")
+#     s=input("Response: ")[:230]
+#     l=input("URL: ")
+#     d={}
+#     n=m.replace(" ","_")
+#     d["tag"]=n
+#     d["patterns"]=[m]
+#     d["responses"]=[s+l]
+#     print(push_intents(d))
 
 #push shouldnt have ',",min of (1) val  
 #max chars 1000
