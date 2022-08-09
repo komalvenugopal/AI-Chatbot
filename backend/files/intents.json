@@ -301,7 +301,7 @@
                 "Adding New Asset Source"
             ],
             "responses": [
-                "Got to add tab and add it from there"
+                "This section details the steps to generate a creative variation by uploading an asset source file created outside of Jivox platform. The Jivox platform allows you to download an Asset Source Template that includes the column headers named as per the Creative Master.  https://userguides.jivox.com/jivox-user-guide/creative-variation-file-upload-video"
             ]
         },
         {
@@ -319,7 +319,349 @@
                 "Uploading the Asset Source"
             ],
             "responses": [
-                "Upload it from the button"
+                "This section details the steps to generate a creative variation by uploading an asset source file created outside of Jivox platform. The Jivox platform allows you to download an Asset Source Template that includes the column headers named as per the Creative Master.  https://userguides.jivox.com/jivox-user-guide/creative-variation-file-upload-video"
+            ]
+        },
+        {
+            "tag": "Creating_Ads_and_Campaigns",
+            "patterns": [
+                "Creating Ads and Campaigns"
+            ],
+            "responses": [
+                "Jivox IQ is an omnichannel AI powered personalization platform that allows you to create and serve personalized digital ads across various channels. The process to serve personalized ads using Jivox platform consists of two parts:https://userguides.jivox.com/jivox-user-guide/New-Ad"
+            ]
+        },
+        {
+            "tag": "Uploading_the_Creative_Master",
+            "patterns": [
+                "Uploading the Creative Master"
+            ],
+            "responses": [
+                "Once you click DCS on the Create Ad page, you will be prompted to select the Ad Unit type and then upload the creative master for that Ad Unit type. Let's upload our creative master here. 1- In the Ad Unit Type drop-down, you willhttps://userguides.jivox.com/jivox-user-guide/Uploading-Creative-master"
+            ]
+        },
+        {
+            "tag": "Creating_the_Asset_Source",
+            "patterns": [
+                "Creating the Asset Source"
+            ],
+            "responses": [
+                "In the Asset Source field, ensure Create New Asset Source is selected. The new Asset Source by default is named after the Creative Master you uploaded. If you wish to rename it, you can type the desired name in the Asset Source fihttps://userguides.jivox.com/jivox-user-guide/create-asset-source"
+            ]
+        },
+        {
+            "tag": "Saving_the_Ad",
+            "patterns": [
+                "Saving the Ad"
+            ],
+            "responses": [
+                "Once the Asset Source is finalised (we have added in more rows in our example), click Add New IAB Banner Unit to finish creating this unit. Give your Ad a name and provide a click-through URL. Click Save Ad to finish creating the https://userguides.jivox.com/jivox-user-guide/save-ad-display"
+            ]
+        },
+        {
+            "tag": "Editing_an_Ad",
+            "patterns": [
+                "Editing an Ad"
+            ],
+            "responses": [
+                "Once an Ad is saved, you can make changes to the Ad using the edit option. Let's start! 1- On the Ads and Campaigns dashboard, select your Ad and click one of the following: the Edit (pencil) icon the Add more units button. This whttps://userguides.jivox.com/jivox-user-guide/editing-an-ad"
+            ]
+        },
+        {
+            "tag": "Creating_Multiple_Ad_Units_of_Different_Sizes",
+            "patterns": [
+                "Creating Multiple Ad Units of Different Sizes"
+            ],
+            "responses": [
+                "Jivox IQ allows you to create multiple ad units of different sizes (dimensions) within a single Ad. In this section, the steps to create multiple Ad Units of different Ad sizes will be discussed in detail. 1- On the Edit page, clihttps://userguides.jivox.com/jivox-user-guide/creating-multiple-ad-units-of-different-ad-sizes"
+            ]
+        },
+        {
+            "tag": "Generating_Creative_Variations_Using_DCS_UI",
+            "patterns": [
+                "Generating Creative Variations Using DCS UI"
+            ],
+            "responses": [
+                "DCS allows you to generate new creative variations using the Asset Carousel from the UI itself. The Asset Carousel displays all the Creative Assets that are pulled from the creative master when using Adobe Animate or Google Web Dehttps://userguides.jivox.com/jivox-user-guide/generate-creative-variations"
+            ]
+        },
+        {
+            "tag": "Generating_Creative_Variations_by_Uploading_an_Asset_Source",
+            "patterns": [
+                "Generating Creative Variations by Uploading an Asset Source"
+            ],
+            "responses": [
+                "You can download the Asset Source template and then fill the columns outside the platform. The Download Asset Source option is available only when you save the ad. To download the Asset Source Template, first you must save the ad.https://userguides.jivox.com/jivox-user-guide/file-upload"
+            ]
+        },
+        {
+            "tag": "Creating_Video_Ad_and_Uploading_the_Creative_Master",
+            "patterns": [
+                "Creating Video Ad and Uploading the Creative Master"
+            ],
+            "responses": [
+                "Once you select DCS on the Create Ad page, you will be prompted to upload your creative master. Let's upload our creative master here.You can either drag and drop your creative master file or select the Browse & Upload option. Thehttps://userguides.jivox.com/jivox-user-guide/upload-creative-master-video"
+            ]
+        },
+        {
+            "tag": "Setting_Up_the_Campaign_-_Bestseller_Recommendation",
+            "patterns": [
+                "Setting Up the Campaign - Bestseller Recommendation"
+            ],
+            "responses": [
+                "From the Data Pixels page, on the left navigation panel, select Campaigns. You will be taken to the campaign listings page. 2- Click Create new Campaign to view the Create Campaign page. In the Creative Master field, the most recehttps://userguides.jivox.com/jivox-user-guide/setting-up-the-campaign---bestseller-recommendation"
+            ]
+        },
+        {
+            "tag": "Configuring_the_Recommendation_Engine",
+            "patterns": [
+                "Configuring the Recommendation Engine"
+            ],
+            "responses": [
+                "The Edit Campaign page is displayed. Switch to the Optimization tab, select Recommendation Engine and click the Enable Recommendations button. The Recommendation Engine setup appears. https://userguides.jivox.com/jivox-user-guide/configuring-recommendation-engine"
+            ]
+        },
+        {
+            "tag": "Generating_Tags",
+            "patterns": [
+                "Generating Tags"
+            ],
+            "responses": [
+                "If you would like to apply 3rd party pixels on a placement level, leave the 'Include Creative Variant\u2019 box unchecked. However if you would like to track on a creative variant level, tick the box so trackers will be applied to all https://userguides.jivox.com/jivox-user-guide/third-party-trackers"
+            ]
+        },
+        {
+            "tag": "Published_and_Placement_Configuration",
+            "patterns": [
+                "Published and Placement Configuration"
+            ],
+            "responses": [
+                "On the last part of the platform, you will be generating tags that you can traffic into the the DSP of your choice. With the media plan uploaded, you will now see two DSPs show up; DV360 & TradeDesk. Within these DSPs, there will https://userguides.jivox.com/jivox-user-guide/publisher-and-placement-configuration"
+            ]
+        },
+        {
+            "tag": "Generating_Tags_in_Bulk",
+            "patterns": [
+                "Generating Tags in Bulk"
+            ],
+            "responses": [
+                "1- After you create an ad and save your campaign, from the campaign listing page, select the Tag Generation icon as highlighted below. The tag generation icon will display two options - Tag Generation and Bulk Tag Generation. Use https://userguides.jivox.com/jivox-user-guide/generating-tags-in-bulk"
+            ]
+        },
+        {
+            "tag": "Configuring_Tag_Variables",
+            "patterns": [
+                "Configuring Tag Variables"
+            ],
+            "responses": [
+                "1- Select the DSP name, data signal and the macro name using the drop down option in the Configure Tag Variables section. 2- Once you select the DSP name, data signal and the macro name, click onto the Save button. The configured https://userguides.jivox.com/jivox-user-guide/configuring-tag-variables"
+            ]
+        },
+        {
+            "tag": "Configuring_DSP_Site_and_Placement",
+            "patterns": [
+                "Configuring DSP Site and Placement"
+            ],
+            "responses": [
+                "After configuring the tag variables, the next step is to configure the DSP site and placement. The DSPs are listed here based on the media plan template under the DSP Name column. Here only DCM is shown. Click the + sign next to thttps://userguides.jivox.com/jivox-user-guide/configuring-dsp-site-and-placement"
+            ]
+        },
+        {
+            "tag": "Generating_Data_Pixels",
+            "patterns": [
+                "Generating Data Pixels"
+            ],
+            "responses": [
+                "Jivox IQ allows you to generate data pixels that can capture user activity on the brand\u2019s product page or the retailer's website. You can use the Data Pixels section in the platform to configure the data pixels as required. Once yhttps://userguides.jivox.com/jivox-user-guide/data-pixels-overview"
+            ]
+        },
+        {
+            "tag": "Creating_E-commerce_Retargeting_Pixels",
+            "patterns": [
+                "Creating E-commerce Retargeting Pixels"
+            ],
+            "responses": [
+                "Follow the instructions for Generating Retargeting Pixels. We must provide the following details for one or more retargeting groups. This will determine the creative group that is to be displayed.https://userguides.jivox.com/jivox-user-guide/creating-ecommerce-retargeting-pixels"
+            ]
+        },
+        {
+            "tag": "Creating_Facebook_Retargeting_Pixels",
+            "patterns": [
+                "Creating Facebook Retargeting Pixels"
+            ],
+            "responses": [
+                "Follow the instructions for Generating Retargeting Pixels. We must provide the following details for one or more retargeting groups. This will determine the creative group that is to be displayed.https://userguides.jivox.com/jivox-user-guide/creating-facebook-retargeting-pixels"
+            ]
+        },
+        {
+            "tag": "Creating_Generic_Conversion_Pixels",
+            "patterns": [
+                "Creating Generic Conversion Pixels"
+            ],
+            "responses": [
+                "Follow the instructions for Generating Conversion Pixels. We must provide the following details for one or more groups. This will determine the creative group that is to be displayed. Once you've provided the above details, see Gehttps://userguides.jivox.com/jivox-user-guide/creating-generic-conversion-pixels"
+            ]
+        },
+        {
+            "tag": "Jivox_Facebook_Integration",
+            "patterns": [
+                "Jivox Facebook Integration"
+            ],
+            "responses": [
+                "To set up a Facebook campaign using Jivox\u2019s Dynamic Creative Optimization (DCO) capabilities, Jivox must have access to the brand\u2019s Business Manager ad account, page and pixel. This can be set up in two ways: Jivox's Integration ihttps://userguides.jivox.com/jivox-user-guide/jivox-facebook-integration"
+            ]
+        },
+        {
+            "tag": "Creating_Facebook_Ad",
+            "patterns": [
+                "Creating Facebook Ad"
+            ],
+            "responses": [
+                "In this section, we will cover the ad creation process . This is a straight forward setup that allows you to create relevant ad units for your Facebook campaign. For example, if you were using only Image units in Facebook, you wouhttps://userguides.jivox.com/jivox-user-guide/facebook-ad-creation"
+            ]
+        },
+        {
+            "tag": "Creating_a_Facebook_Campaign",
+            "patterns": [
+                "Creating a Facebook Campaign"
+            ],
+            "responses": [
+                "In the Create Facebook Campaign section, you will see the following three options: Create new Campaign - Select this to create a brand new campaign. You can make as many changes as required in these campaigns. Use an existing Camphttps://userguides.jivox.com/jivox-user-guide/facebook---create-facebook-campaign"
+            ]
+        },
+        {
+            "tag": "Mapping_the_Asset_Source",
+            "patterns": [
+                "Mapping the Asset Source"
+            ],
+            "responses": [
+                "1- Select the desired Asset Source from the Select Asset Source drop-down. 2- Map each Facebook Asset to an Asset Source Column by selecting the appropriate option from the drop-down. If the Asset source column matches exactly withttps://userguides.jivox.com/jivox-user-guide/facebook---map-asset-source"
+            ]
+        },
+        {
+            "tag": "Managing_Facebook_Adsets",
+            "patterns": [
+                "Managing Facebook Adsets"
+            ],
+            "responses": [
+                "In the Manage Ad Set section, we will set the budget and placement for the selected ad set(s). Follow these steps: 1- From the Default Ad Set Budget drop-down, select the budget type as Daily Budget or Lifetime Budget. 2- Enter thhttps://userguides.jivox.com/jivox-user-guide/facebook---manage-ad-sets"
+            ]
+        },
+        {
+            "tag": "Editing_Facebook_Campaign",
+            "patterns": [
+                "Editing Facebook Campaign"
+            ],
+            "responses": [
+                "1- Under Create Facebook Campaign select the Use an existing Campaign option. Proceed to enter your Business Manager ID, select your Ad Account from the dropdown and choose your existing Facebook Campaign Name from the drop-down. https://userguides.jivox.com/jivox-user-guide/facebook--edit-existing-campaign"
+            ]
+        },
+        {
+            "tag": "Best_Practices_for_Setting_Facebook_Campaign_Strategy",
+            "patterns": [
+                "Best Practices for Setting Facebook Campaign Strategy"
+            ],
+            "responses": [
+                "A user must keep certain recommendations in mind before deciding on the campaign strategy for campaigns that use data triggers like weather, geolocation For campaigns that use weather triggers and have video ads to be shown, an ithttps://userguides.jivox.com/jivox-user-guide/best-practices-for-setting-facebook-campaign-strategy"
+            ]
+        },
+        {
+            "tag": "Setting_up_the_Scheduler",
+            "patterns": [
+                "Setting up the Scheduler"
+            ],
+            "responses": [
+                "Once the triggers are successfully configured, we can set a schedule to run the campaign from the Schedule screen. The scheduler will enable or disable the published ads based on the set contextual triggers. To set the schedule, chttps://userguides.jivox.com/jivox-user-guide/facebook-scheduler"
+            ]
+        },
+        {
+            "tag": "Configuring_Placement_Asset_Customisation",
+            "patterns": [
+                "Configuring Placement Asset Customisation"
+            ],
+            "responses": [
+                "Create a new Social ad with Image or Video as the ad unit type. To create a new Facebook Ad, refer to Creating a New Ad. Once the ad has been created, create a Facebook campaign. This can be done by creating a dynamic campaign andhttps://userguides.jivox.com/jivox-user-guide/facebook-configure-placement-asset"
+            ]
+        },
+        {
+            "tag": "Reporting_in_Jivox",
+            "patterns": [
+                "Reporting in Jivox"
+            ],
+            "responses": [
+                "Jivox allows a number of sophisticated reporting options providing you access to all the metrics that are captured. The typical process to pull a report from the Jivox UI is shown below. There are four main types of reports that ahttps://userguides.jivox.com/jivox-user-guide/reporting-in-jivox"
+            ]
+        },
+        {
+            "tag": "Reporting_Summary",
+            "patterns": [
+                "Reporting Summary"
+            ],
+            "responses": [
+                "The Summary report is a simple visualisation that allows you to select a campaign, a date range, and see a snapshot that summarises the total impressions, total interactions and total interaction rate, as shown in this example.https://userguides.jivox.com/jivox-user-guide/summary-report"
+            ]
+        },
+        {
+            "tag": "Reporting_Details",
+            "patterns": [
+                "Reporting Details"
+            ],
+            "responses": [
+                "The Details report provides a set of pre-configured reports that can be used to easily access common performance metrics. The following Details reports are available, tailored to different user scenarios: Campaign Overview: Snapshhttps://userguides.jivox.com/jivox-user-guide/details-report"
+            ]
+        },
+        {
+            "tag": "Custom_Reporting",
+            "patterns": [
+                "Custom Reporting"
+            ],
+            "responses": [
+                "To create a Custom report, follow these steps: 1- Click on the Custom tab. 2- Select a campaign from the list and a date range for the report. 3- Select all the Metric Options you want to include. The list of metrics includes stanhttps://userguides.jivox.com/jivox-user-guide/custom-report"
+            ]
+        },
+        {
+            "tag": "Scheduled_Reporting",
+            "patterns": [
+                "Scheduled Reporting"
+            ],
+            "responses": [
+                "1- Click on the Schedule tab. 2- Click Add New Schedule. 3- Select these options for the scheduled report: Campaign Report Report Start/End date Email Frequency (Schedule) Start on Datehttps://userguides.jivox.com/jivox-user-guide/scheduled-reports"
+            ]
+        },
+        {
+            "tag": "Enabling_Fraud_Filtering",
+            "patterns": [
+                "Enabling Fraud Filtering"
+            ],
+            "responses": [
+                "Jivox runs fraud analysis on impressions and clicks using blacklisted user agents provided by IAB and filters out the fraudulent impressions and the fraudulent clicks. This addresses the discrepancies in the click and the impressihttps://userguides.jivox.com/jivox-user-guide/enabling-fraud-filtering-by-default"
+            ]
+        },
+        {
+            "tag": "Creating_a_Feed_Based_Decisioning_Campaign",
+            "patterns": [
+                "Creating a Feed Based Decisioning Campaign"
+            ],
+            "responses": [
+                "In the decision graph, the advertiser is not allowed to perform lookup on asset sources while configuring the campaign in the decision graph, and those values must be entered manually. With feed based decisioning in place, the advhttps://userguides.jivox.com/jivox-user-guide/creating-a-feed-based-decisioning-campaign"
+            ]
+        },
+        {
+            "tag": "Cloning_Campaigns_with_FBD_Configurations",
+            "patterns": [
+                "Cloning Campaigns with FBD Configurations"
+            ],
+            "responses": [
+                "When you clone a campaign for the first time, Jivox IQ clones respective ads, campaigns, asset sources, decision maps, decision graphs and FBD Configurations into the destination clone. The FBD configurations will get updated withhttps://userguides.jivox.com/jivox-user-guide/cloning-campaigns-with-fbd-configurations"
+            ]
+        },
+        {
+            "tag": "DV_360_Integration",
+            "patterns": [
+                "DV 360 Integration"
+            ],
+            "responses": [
+                "DV360, also known as Display and Video 360 is Google Marketing Platform\u2019s demand-side platform (DSP) for programmatic media buying, allowing advertisers and marketers to activate media buys with maximum control. It offers a singlehttps://userguides.jivox.com/jivox-user-guide/dv-360-integration"
             ]
         }
     ]

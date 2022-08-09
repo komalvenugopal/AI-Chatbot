@@ -11,8 +11,6 @@ from torch.utils.data import Dataset, DataLoader
 from utils import bag_of_words, tokenize, stem, get_intents
 import utils
 from model import NeuralNet
-from utils import get_pos_tag
-from nltk import pos_tag
 from nltk.stem import WordNetLemmatizer 
 # nltk.download('stopwords') 
 # nltk.download('wordnet') 
@@ -41,7 +39,7 @@ for intent in intents['intents']:
         # add to xy pair
         xy.append((w, tag))
     
-all_words = [lemmatizer.lemmatize(w,pos=get_pos_tag(pos_tag([w])[0][1])) for w in all_words if w.lower() not in utils.ignore_words]
+all_words = [stem(w) for w in all_words if w.lower() not in utils.ignore_words]
 # print(all_words)
 
 # # remove duplicates and sort

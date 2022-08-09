@@ -35,24 +35,9 @@ from nltk.corpus import wordnet
 en_stops = set(stopwords.words('english')) 
 punc=list(string.punctuation)
 ignore_words=list(en_stops)+list(punc)
-lemmatizer=WordNetLemmatizer()
-
-def get_pos_tag(tag):
-    tag=tag.upper()
-    if tag.startswith("J"):
-        return wordnet.ADJ
-    elif tag.startswith("V"):
-        return wordnet.VERB
-    elif tag.startswith("N"):
-        return wordnet.NOUN
-    elif tag.startswith("R"):
-        return wordnet.ADV
-    else:
-        return wordnet.NOUN
-
 
 def bag_of_words(tokenized_sentence, words):
-    sentence_words = [lemmatizer.lemmatize(w,pos=get_pos_tag(pos_tag([w])[0][1])) for w in tokenized_sentence if w.lower() not in ignore_words]
+    sentence_words = [stem(word) for word in tokenized_sentence]
     bag = np.zeros(len(words), dtype=np.float32)
     for idx, w in enumerate(words):
         if w in sentence_words: 
