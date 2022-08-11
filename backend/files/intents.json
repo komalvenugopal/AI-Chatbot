@@ -663,6 +663,50 @@
             "responses": [
                 "DV360, also known as Display and Video 360 is Google Marketing Platform\u2019s demand-side platform (DSP) for programmatic media buying, allowing advertisers and marketers to activate media buys with maximum control. It offers a singlehttps://userguides.jivox.com/jivox-user-guide/dv-360-integration"
             ]
+        },
+        {
+            "tag": "Greeting",
+            "patterns": [
+                "Hi",
+                "Hey",
+                "How are you",
+                "Is anyone there?",
+                "Hello",
+                "Good day"
+            ],
+            "responses": [
+                "Hey :-)",
+                "Hello, thanks for visiting",
+                "Hi there, what can I do for you?",
+                "Hi there, how can I help?"
+            ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Bye",
+                "See you later",
+                "Goodbye"
+            ],
+            "responses": [
+                "See you later, thanks for visiting",
+                "Have a nice day",
+                "Bye! Come back again soon."
+            ]
+        },
+        {
+            "tag": "Thanks",
+            "patterns": [
+                "Thanks",
+                "Thank you",
+                "That's helpful",
+                "Thank's a lot!"
+            ],
+            "responses": [
+                "Happy to help!",
+                "Any time!",
+                "My pleasure"
+            ]
         }
     ]
 }
