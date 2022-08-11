@@ -70,23 +70,31 @@ knn = NearestNeighbors(metric='cosine', algorithm='brute', n_neighbors=10, n_job
 knn.fit(csr_data)
 
 def get_question_recommendation(question_idx):
-    n_questions_to_reccomend = 5
-    log.info("Question id: %s", question_idx)
-    distances , indices = knn.kneighbors(csr_data[question_idx],n_neighbors=n_questions_to_reccomend+1) 
-    log.info("OK3")
-    # print(distances,indices)  
-    rec_question_indices = sorted(list(zip(indices.squeeze().tolist(),distances.squeeze().tolist())),key=lambda x: x[1])[:0:-1]
-    log.info("OK4")    
-    recommended_questions=[]
-    for val in rec_question_indices:
-        question_idx = int(final_dataset.iloc[val[0]]['question_id'])
-        recommended_question=mysqlselect("select pattern from `eam_brb_tmp`.QUESTION where id={}".format(question_idx))        
-        recommended_question= eval(recommended_question[0][0])
-        recommended_question= recommended_question[random.randint(0,len(recommended_question)-1)]
-        # print(recommended_question)
-        recommended_questions.append(recommended_question)
-    log.info("OK5")
-    return recommended_questions
+    try:
+        n_questions_to_reccomend = 5
+        log.info("Question id: %s", question_idx)
+        if(question_idx in csr_data):
+            return ["How to clone ads","How to add a new third party integration","What are dynamic campaign","How to add a new creative master","How to use jivox studio"]
+
+        distances , indices = knn.kneighbors(csr_data[question_idx],n_neighbors=n_questions_to_reccomend+1)
+        log.info("OK3")
+        # print(distances,indices)
+        rec_question_indices = sorted(list(zip(indices.squeeze().tolist(),distances.squeeze().tolist())),key=lambda x: x[1])[:0:-1]
+        log.info("OK4")
+        recommended_questions=[]
+        for val in rec_question_indices:
+            question_idx = int(final_dataset.iloc[val[0]]['question_id'])
+            recommended_question=mysqlselect("select pattern from `eam_brb_tmp`.QUESTION where id={}".format(question_idx))
+            recommended_question= eval(recommended_question[0][0])
+            recommended_question= recommended_question[random.randint(0,len(recommended_question)-1)]
+            # print(recommended_question)
+            recommended_questions.append(recommended_question)
+        log.info("OK5")
+        return recommended_questions
+    except:
+        log.info("Retuning default recos")
+        return ["How to clone ads","How to add a new third party integration","What are dynamic campaign","How to add a new creative master","How to use jivox studio"]
+
 
 # reco= get_question_recommendation(1)
 # print(reco)

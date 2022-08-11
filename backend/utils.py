@@ -115,9 +115,9 @@ def check_user(userid):
 
 
 
-# for i in range(1000):
-#     from random import randint
-#     mysqlinsert("insert into `eam_brb_tmp`.CHATBOT_INTERACTIONS (user_id,question_id) values(%s,%s)",(randint(1,50),randint(1,71)))
+#for i in range(1000):
+#    from random import randint
+#    mysqlinsert("insert into `eam_brb_tmp`.CHATBOT_INTERACTIONS (user_id,question_id) values(%s,%s)",(randint(1,50),randint(73,76)))
 
 # push_interaction({"userid":1,"question_id":2})
 
