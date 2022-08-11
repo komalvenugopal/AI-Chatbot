@@ -3,7 +3,7 @@
         "id" : 123
 "db":
     "username" : "root"
-    # "password" : "Jivoxdb"
-    # "host"  : "db.dev.jivox.com"
-    "password" : ""
-    "host": "127.0.0.1"
+    "password" : "Jivoxdb"
+    "host"  : "db.dev.jivox.com"
+    #"password" : ""
+    #"host": "127.0.0.1"

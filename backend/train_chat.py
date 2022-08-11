@@ -12,10 +12,10 @@ from utils import bag_of_words, tokenize, stem, get_intents
 import utils
 from model import NeuralNet
 from nltk.stem import WordNetLemmatizer 
-# nltk.download('stopwords') 
-# nltk.download('wordnet') 
-# nltk.download('omw-1.4')
-# nltk.download('averaged_perceptron_tagger')
+nltk.download('stopwords') 
+nltk.download('wordnet') 
+nltk.download('omw-1.4')
+nltk.download('averaged_perceptron_tagger')
 
 lemmatizer=WordNetLemmatizer()
 

@@ -7,6 +7,12 @@ import json, string
 from torch import rand
 import pymysql,ast,logging,yaml
 
+nltk.download('stopwords')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('punkt')
+
 stemmer = PorterStemmer()
 log = logging.getLogger(__name__)
 
