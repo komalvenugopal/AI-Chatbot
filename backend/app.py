@@ -31,13 +31,16 @@ def predict():
 
         push_interaction(tag,userid)        
         if(tag!=""):
+            log.info('Tag Found')
             answer=mysqlselect("select id from `eam_brb_tmp`.QUESTION where tag="+"'"+tag+"'")
-            # log.info('Answer: ', answer[0][0])
             recommendations= get_question_recommendation(answer[0][0])
+            log.info("OK")
+            log.info(recommendations)
             message = {"answer": response["answer"],"recommendations":recommendations}
             log.info('Posted the answer %s', message)
             return jsonify(message)
         else:
+            log.info('Tag not found')
             message = {"answer": response["answer"],"recommendations":get_question_recommendation(1)}
             log.info('Didnt find the answer %s', message)
             return jsonify(message)

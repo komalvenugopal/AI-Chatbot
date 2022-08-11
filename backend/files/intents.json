@@ -665,7 +665,7 @@
             ]
         },
         {
-            "tag": "Greeting",
+            "tag": "Hi",
             "patterns": [
                 "Hi",
                 "Hey",
@@ -682,7 +682,21 @@
             ]
         },
         {
-            "tag": "goodbye",
+            "tag": "Thanks",
+            "patterns": [
+                "Thanks",
+                "Thank you",
+                "That's helpful",
+                "Thank's a lot!"
+            ],
+            "responses": [
+                "Happy to help!",
+                "Any time!",
+                "My pleasure"
+            ]
+        },
+        {
+            "tag": "Bye",
             "patterns": [
                 "Bye",
                 "See you later",
@@ -695,17 +709,15 @@
             ]
         },
         {
-            "tag": "Thanks",
+            "tag": "OK",
             "patterns": [
-                "Thanks",
-                "Thank you",
-                "That's helpful",
-                "Thank's a lot!"
+                "OK",
+                "Fine",
+                "Sure",
+                "Hmm"
             ],
             "responses": [
-                "Happy to help!",
-                "Any time!",
-                "My pleasure"
+                "Is there anything else ?"
             ]
         }
     ]

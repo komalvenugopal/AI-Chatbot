@@ -1,1 +1,491 @@
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Serving Flask app 'app'
+ * Debug mode: on
+[nltk_data] Downloading package stopwords to /home/ubuntu/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package wordnet to /home/ubuntu/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /home/ubuntu/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /home/ubuntu/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+[nltk_data] Downloading package punkt to /home/ubuntu/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict' did not return a valid response. The function either returned None or ended without a return statement.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict' did not return a valid response. The function either returned None or ended without a return statement.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict' did not return a valid response. The function either returned None or ended without a return statement.
+[nltk_data] Downloading package stopwords to /home/ubuntu/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package wordnet to /home/ubuntu/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /home/ubuntu/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /home/ubuntu/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+[nltk_data] Downloading package punkt to /home/ubuntu/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict' did not return a valid response. The function either returned None or ended without a return statement.
+[nltk_data] Downloading package stopwords to /home/ubuntu/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package wordnet to /home/ubuntu/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /home/ubuntu/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /home/ubuntu/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+[nltk_data] Downloading package punkt to /home/ubuntu/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict' did not return a valid response. The function either returned None or ended without a return statement.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict' did not return a valid response. The function either returned None or ended without a return statement.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict' did not return a valid response. The function either returned None or ended without a return statement.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict' did not return a valid response. The function either returned None or ended without a return statement.
+((72,),)
+((72,),)
+((72,),)
+((72,),)
+[nltk_data] Downloading package stopwords to /home/ubuntu/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package wordnet to /home/ubuntu/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /home/ubuntu/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /home/ubuntu/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+[nltk_data] Downloading package punkt to /home/ubuntu/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict' did not return a valid response. The function either returned None or ended without a return statement.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict' did not return a valid response. The function either returned None or ended without a return statement.
+((72,),)
+((72,),)
+[nltk_data] Downloading package stopwords to /home/ubuntu/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package wordnet to /home/ubuntu/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /home/ubuntu/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /home/ubuntu/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+[nltk_data] Downloading package punkt to /home/ubuntu/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict' did not return a valid response. The function either returned None or ended without a return statement.
+[nltk_data] Downloading package stopwords to /home/ubuntu/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package wordnet to /home/ubuntu/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /home/ubuntu/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /home/ubuntu/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+[nltk_data] Downloading package punkt to /home/ubuntu/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package stopwords to /home/ubuntu/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package wordnet to /home/ubuntu/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /home/ubuntu/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /home/ubuntu/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+[nltk_data] Downloading package punkt to /home/ubuntu/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package stopwords to /home/ubuntu/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package wordnet to /home/ubuntu/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /home/ubuntu/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /home/ubuntu/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+[nltk_data] Downloading package punkt to /home/ubuntu/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict' did not return a valid response. The function either returned None or ended without a return statement.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict' did not return a valid response. The function either returned None or ended without a return statement.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict' did not return a valid response. The function either returned None or ended without a return statement.
+user_id  question_id    1    2    3    4    5  ...   45   46   47   48   49   50
+0                  1  2.0  1.0  2.0  0.0  3.0  ...  0.0  0.0  1.0  0.0  0.0  1.0
+1                  2  1.0  0.0  0.0  0.0  1.0  ...  0.0  0.0  1.0  0.0  0.0  1.0
+2                  3  2.0  1.0  0.0  0.0  3.0  ...  0.0  0.0  0.0  0.0  0.0  0.0
+3                  4  0.0  0.0  0.0  1.0  0.0  ...  1.0  0.0  0.0  0.0  1.0  0.0
+4                  5  0.0  2.0  0.0  0.0  1.0  ...  1.0  2.0  1.0  1.0  0.0  2.0
+..               ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...
+66                67  0.0  1.0  1.0  2.0  0.0  ...  2.0  0.0  0.0  0.0  1.0  0.0
+67                68  0.0  0.0  1.0  0.0  3.0  ...  1.0  0.0  1.0  0.0  1.0  0.0
+68                69  1.0  0.0  0.0  0.0  1.0  ...  2.0  0.0  0.0  0.0  0.0  0.0
+69                70  1.0  1.0  2.0  0.0  1.0  ...  0.0  0.0  1.0  0.0  2.0  0.0
+70                71  0.0  0.0  0.0  2.0  0.0  ...  1.0  0.0  3.0  1.0  0.0  0.0
 
+[71 rows x 51 columns]
+user_id  question_id    1    2    3    4    5  ...   45   46   47   48   49   50
+0                  1  2.0  1.0  2.0  0.0  3.0  ...  0.0  0.0  1.0  0.0  0.0  1.0
+1                  2  1.0  0.0  0.0  0.0  1.0  ...  0.0  0.0  1.0  0.0  0.0  1.0
+2                  3  2.0  1.0  0.0  0.0  3.0  ...  0.0  0.0  0.0  0.0  0.0  0.0
+3                  4  0.0  0.0  0.0  1.0  0.0  ...  1.0  0.0  0.0  0.0  1.0  0.0
+4                  5  0.0  2.0  0.0  0.0  1.0  ...  1.0  2.0  1.0  1.0  0.0  2.0
+..               ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...
+66                67  0.0  1.0  1.0  2.0  0.0  ...  2.0  0.0  0.0  0.0  1.0  0.0
+67                68  0.0  0.0  1.0  0.0  3.0  ...  1.0  0.0  1.0  0.0  1.0  0.0
+68                69  1.0  0.0  0.0  0.0  1.0  ...  2.0  0.0  0.0  0.0  0.0  0.0
+69                70  1.0  1.0  2.0  0.0  1.0  ...  0.0  0.0  1.0  0.0  2.0  0.0
+70                71  0.0  0.0  0.0  2.0  0.0  ...  1.0  0.0  3.0  1.0  0.0  0.0
+
+[71 rows x 51 columns]
+[nltk_data] Downloading package stopwords to /home/ubuntu/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package wordnet to /home/ubuntu/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /home/ubuntu/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /home/ubuntu/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+[nltk_data] Downloading package punkt to /home/ubuntu/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict' did not return a valid response. The function either returned None or ended without a return statement.
+user_id  question_id    1    2    3    4    5  ...   45   46   47   48   49   50
+0                  1  2.0  1.0  2.0  0.0  3.0  ...  0.0  0.0  1.0  0.0  0.0  1.0
+1                  2  1.0  0.0  0.0  0.0  1.0  ...  0.0  0.0  1.0  0.0  0.0  1.0
+2                  3  2.0  1.0  0.0  0.0  3.0  ...  0.0  0.0  0.0  0.0  0.0  0.0
+3                  4  0.0  0.0  0.0  1.0  0.0  ...  1.0  0.0  0.0  0.0  1.0  0.0
+4                  5  0.0  2.0  0.0  0.0  1.0  ...  1.0  2.0  1.0  1.0  0.0  2.0
+..               ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...
+66                67  0.0  1.0  1.0  2.0  0.0  ...  2.0  0.0  0.0  0.0  1.0  0.0
+67                68  0.0  0.0  1.0  0.0  3.0  ...  1.0  0.0  1.0  0.0  1.0  0.0
+68                69  1.0  0.0  0.0  0.0  1.0  ...  2.0  0.0  0.0  0.0  0.0  0.0
+69                70  1.0  1.0  2.0  0.0  1.0  ...  0.0  0.0  1.0  0.0  2.0  0.0
+70                71  0.0  0.0  0.0  2.0  0.0  ...  1.0  0.0  3.0  1.0  0.0  0.0
+
+[71 rows x 51 columns]
+[nltk_data] Downloading package stopwords to /home/ubuntu/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package wordnet to /home/ubuntu/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /home/ubuntu/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /home/ubuntu/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+[nltk_data] Downloading package punkt to /home/ubuntu/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict' did not return a valid response. The function either returned None or ended without a return statement.
+[nltk_data] Downloading package stopwords to /home/ubuntu/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package wordnet to /home/ubuntu/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /home/ubuntu/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /home/ubuntu/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+[nltk_data] Downloading package punkt to /home/ubuntu/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict' did not return a valid response. The function either returned None or ended without a return statement.
+[nltk_data] Downloading package stopwords to /home/ubuntu/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package wordnet to /home/ubuntu/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /home/ubuntu/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /home/ubuntu/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+[nltk_data] Downloading package punkt to /home/ubuntu/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+Traceback (most recent call last):
+  File "/home/ubuntu/hackathon/backend/app.py", line 9, in <module>
+    from reco import get_question_recommendation
+  File "/home/ubuntu/hackathon/backend/reco.py", line 65, in <module>
+    print(csr_data["72"])
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/scipy/sparse/_index.py", line 47, in __getitem__
+    row, col = self._validate_indices(key)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/scipy/sparse/_index.py", line 159, in _validate_indices
+    row = self._asindices(row, M)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/scipy/sparse/_index.py", line 183, in _asindices
+    raise IndexError('Index dimension must be 1 or 2')
+IndexError: Index dimension must be 1 or 2
+[nltk_data] Downloading package stopwords to /home/ubuntu/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package wordnet to /home/ubuntu/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /home/ubuntu/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /home/ubuntu/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+[nltk_data] Downloading package punkt to /home/ubuntu/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!

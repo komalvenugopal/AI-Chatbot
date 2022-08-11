@@ -6,6 +6,8 @@ from scipy.sparse import csr_matrix
 from sklearn.neighbors import NearestNeighbors
 from utils import mysqlselect
 import random,logging
+import logging
+log = logging.getLogger(__name__)
 
 interactions=mysqlselect("select user_id,question_id from `eam_brb_tmp`.CHATBOT_INTERACTIONS")
 interactions=dict(Counter(interactions))
@@ -60,6 +62,7 @@ final_dataset=final_dataset.loc[:,no_questions_visited[no_questions_visited > n]
 #We are using only a small dataset but for the original large dataset of question lens which has more than 100000 features, our system may run out of computational resources when that is feed to the model. To reduce the sparsity we use the csr_matrix function from the scipy library.
 #find and keep only non zero values
 csr_data = csr_matrix(final_dataset.values)
+print(csr_data)
 
 final_dataset.reset_index(inplace=True)
 
@@ -68,10 +71,12 @@ knn.fit(csr_data)
 
 def get_question_recommendation(question_idx):
     n_questions_to_reccomend = 5
-    question_idx = final_dataset[final_dataset['question_id'] == question_idx].index[0]
-    distances , indices = knn.kneighbors(csr_data[question_idx],n_neighbors=n_questions_to_reccomend+1)  
+    log.info("Question id: %s", question_idx)
+    distances , indices = knn.kneighbors(csr_data[question_idx],n_neighbors=n_questions_to_reccomend+1) 
+    log.info("OK3")
     # print(distances,indices)  
     rec_question_indices = sorted(list(zip(indices.squeeze().tolist(),distances.squeeze().tolist())),key=lambda x: x[1])[:0:-1]
+    log.info("OK4")    
     recommended_questions=[]
     for val in rec_question_indices:
         question_idx = int(final_dataset.iloc[val[0]]['question_id'])
@@ -80,6 +85,7 @@ def get_question_recommendation(question_idx):
         recommended_question= recommended_question[random.randint(0,len(recommended_question)-1)]
         # print(recommended_question)
         recommended_questions.append(recommended_question)
+    log.info("OK5")
     return recommended_questions
 
 # reco= get_question_recommendation(1)
