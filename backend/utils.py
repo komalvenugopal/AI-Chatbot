@@ -107,6 +107,8 @@ def check_user(userid):
         return False
     return True
 
+
+
 # for i in range(1000):
 #     from random import randint
 #     mysqlinsert("insert into `eam_brb_tmp`.CHATBOT_INTERACTIONS (user_id,question_id) values(%s,%s)",(randint(1,50),randint(1,71)))
@@ -135,4 +137,9 @@ def check_user(userid):
 #push shouldnt have ',",min of (1) val  
 #max chars 1000
 
-# get_intents()
+# d={}
+# a=get_intents()
+# for i in a["intents"]:
+#     d[i["patterns"][0]]=dict({"answer":i["responses"][0]})
+
+# print(json.dumps(d,indent=4))    

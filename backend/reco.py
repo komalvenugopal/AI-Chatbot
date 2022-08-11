@@ -9,6 +9,7 @@ import random,logging
 
 interactions=mysqlselect("select user_id,question_id from `eam_brb_tmp`.CHATBOT_INTERACTIONS")
 interactions=dict(Counter(interactions))
+# print(interactions)
 
 questions_dataset=[]
 questions=mysqlselect("select id,pattern from `eam_brb_tmp`.QUESTION")
@@ -59,7 +60,6 @@ final_dataset=final_dataset.loc[:,no_questions_visited[no_questions_visited > n]
 #We are using only a small dataset but for the original large dataset of question lens which has more than 100000 features, our system may run out of computational resources when that is feed to the model. To reduce the sparsity we use the csr_matrix function from the scipy library.
 #find and keep only non zero values
 csr_data = csr_matrix(final_dataset.values)
-# print(csr_data)
 
 final_dataset.reset_index(inplace=True)
 
